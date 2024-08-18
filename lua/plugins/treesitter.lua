@@ -13,6 +13,7 @@ return {
       "python",
       "query",
       "regex",
+      "rust",
       "tsx",
       "svelte",
       "typescript",
