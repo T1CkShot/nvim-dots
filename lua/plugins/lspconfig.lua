@@ -93,7 +93,6 @@ return {
         filetypes = { "js", "ts", "tsx", "javascript", "typescript", "ojs" },
       })
 
-
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
         flags = lsp_flags,
@@ -132,21 +131,21 @@ return {
       --   flags = lsp_flags
       -- }
 
-      lspconfig.clangd.setup {
+      lspconfig.clangd.setup({
         capabilities = capabilities,
         flags = lsp_flags,
-      }
+      })
 
-      lspconfig.rust_analyzer.setup {
+      lspconfig.rust_analyzer.setup({
         capabilities = capabilities,
         settings = {
-          ['rust-analyzer'] = {
+          ["rust-analyzer"] = {
             diagnostics = {
               enable = true,
-            }
-          }
-        }
-      }
+            },
+          },
+        },
+      })
 
       -- See https://github.com/neovim/neovim/issues/23291
       -- disable lsp watcher.
@@ -172,7 +171,7 @@ return {
         },
         root_dir = function(fname)
           return util.root_pattern(".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt")(fname)
-              or util.path.dirname(fname)
+            or util.path.dirname(fname)
         end,
       })
     end,
