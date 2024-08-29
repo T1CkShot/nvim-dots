@@ -7,10 +7,11 @@ local function get_neovim_theme(gtk_theme)
     ["Catppuccin-Mocha"] = "catppuccin-mocha",
     ["Graphite-Mono"] = "warlock",
     ["Dracula"] = "dracula",
-    ["Onedark"] = "onedark"
+    ["One-Dark"] = "onedark",
+    ["Rain-Dark"] = "zaibatsu",
   }
 
-  return theme_map[gtk_theme] or "gruvbox"
+  return theme_map[gtk_theme] or "default"
 end
 
 local function get_gtk_theme()
